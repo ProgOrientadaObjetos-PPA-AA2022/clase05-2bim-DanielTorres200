@@ -2,7 +2,7 @@
  * O — Open/closed principle (Principio abierto/cerrado)
  */
 package paquete04;
-
+import java.util.ArrayList;
 /**
  *
  * @author reroes
@@ -17,9 +17,18 @@ public class Principal {
         taxi.establecerCooperativaTaxi("Yahuarcuna");
         taxi.establecerTarifa();
         
+        TransporteAereo avion = new TransporteAereo();
+        avion.establecerTransporteAereo("Michoacan");
+        avion.establecerTarifa();
+        
+        TransporteMaritimo barco = new TransporteMaritimo();
+        barco.establecerTransporteMaritimo("Galapagos");
+        barco.establecerTarifa();
+        
+        ArrayList<Transporte> lista = new ArrayList<>();
+        
         TiposTransporte tipos = new TiposTransporte();
-        tipos.establecerTransporteBus(bus);
-        tipos.establecerTransporteTaxi(taxi);
+        tipos.establecerTransportes(lista);
         tipos.establecerPromedioTarifas();
         
         System.out.printf("Promedio de Tarifas: %.2f", 
