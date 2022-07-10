@@ -18,10 +18,17 @@ public class TransporteAereo extends Transporte{
 
     @Override
     public void establecerTarifa() {
-        tarifa = 2.00 + 0.20;
+        tarifa = 40.00 + 20.50;
     }
 
     public String obtenerCooperativaBus() {
         return transporteAereo;
+    }
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("Transporte Aereo\n"
+                + "Transporte aereo: $ %.2f\n" ,tarifa);
+        return cadena; 
     }
 }

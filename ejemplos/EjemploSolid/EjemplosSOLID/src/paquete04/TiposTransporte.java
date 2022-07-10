@@ -7,35 +7,44 @@ package paquete04;
 
 import java.util.ArrayList;
 
-
 /**
  *
  * @author reroes
  */
 public class TiposTransporte {
+
     private double promedioTarifas;
     private ArrayList<Transporte> transportes; // puedo tener muchos tipos de Transporte
-    
-    
-    public void establecerTransportes(ArrayList<Transporte> t){
+
+    public void establecerTransportes(ArrayList<Transporte> t) {
         transportes = t;
     }
-    
-    public ArrayList<Transporte> obtenerTransportes(){
+
+    public ArrayList<Transporte> obtenerTransportes() {
         return transportes;
     }
-    
-    public void establecerPromedioTarifas(){
+
+    public void establecerPromedioTarifas() {
         double suma = 0;
         for (int i = 0; i < obtenerTransportes().size(); i++) {
             suma = suma + obtenerTransportes().get(i).obtenerTarifa();
         }
         promedioTarifas = suma / obtenerTransportes().size();
-        
     }
-    
-    public double obtenerPromedioTarifas(){
+
+    public double obtenerPromedioTarifas() {
         return promedioTarifas;
     }
-    
+
+    @Override
+    public String toString() {
+        String cadena = String.format("Reporte\n");
+        for (int i = 0; i < obtenerTransportes().size(); i++) {
+            cadena = String.format("%s\n%s",
+                    cadena, obtenerTransportes().get(i));
+        }
+        cadena = String.format("%s\nPromedio Tarifas: $ %.2f",
+                cadena, obtenerPromedioTarifas());
+        return cadena;
+    }
 }

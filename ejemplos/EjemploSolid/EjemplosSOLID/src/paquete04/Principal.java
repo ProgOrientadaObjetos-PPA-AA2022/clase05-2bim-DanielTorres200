@@ -26,6 +26,10 @@ public class Principal {
         barco.establecerTarifa();
         
         ArrayList<Transporte> lista = new ArrayList<>();
+        lista.add(bus);
+        lista.add(taxi);
+        lista.add(avion);
+        lista.add(barco);
         
         TiposTransporte tipos = new TiposTransporte();
         tipos.establecerTransportes(lista);

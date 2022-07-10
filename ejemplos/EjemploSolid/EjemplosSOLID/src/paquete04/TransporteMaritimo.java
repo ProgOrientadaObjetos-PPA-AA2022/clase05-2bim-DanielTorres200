@@ -18,10 +18,17 @@ public class TransporteMaritimo extends Transporte{
 
     @Override
     public void establecerTarifa() {
-        tarifa = 1000.00 + 1;
+        tarifa = 600.00 + 400.1;
     }
 
     public String obtenerTransporteMaritimo() {
         return transporteMaritimo;
+    }
+    
+    @Override 
+    public String toString(){ 
+        String cadena = String.format("Transporte Barcos\n"
+                + "Transporte Maritimo: $ %.1f\n",obtenerTarifa());
+        return cadena; 
     }
 }

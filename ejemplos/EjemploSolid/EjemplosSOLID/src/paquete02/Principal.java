@@ -13,16 +13,16 @@ public class Principal {
         Persona person2 = new Persona("Sebastian", 21);
         Persona person3 = new Persona("Sofia", 20);
         //2. Agregr a un arrailist
-         ArrayList<Persona> personas = new ArrayList<>();
-        personas.add(person1);
-        personas.add(person2);
-        personas.add(person3);
+         ArrayList<Persona> persona = new ArrayList<>();
+        persona.add(person1);
+        persona.add(person2);
+        persona.add(person3);
         //3. Generar el objeto de tipo Operaciones Estudiante
         OperacionesEstudiantes operaciones = new OperacionesEstudiantes();
-        operaciones.establecerEstudiante(Persona);
+        operaciones.establecerEstudiante(persona);
         operaciones.establecerPromedioEdades();
         
         //4. Presentar el ToString de Operaciones Estudiantes
-        System.out.println("%s\n", operaciones);      
+        System.out.println(operaciones);      
     }
 }
