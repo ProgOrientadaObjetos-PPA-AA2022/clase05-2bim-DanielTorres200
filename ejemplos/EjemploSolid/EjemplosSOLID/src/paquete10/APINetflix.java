@@ -5,19 +5,28 @@
  */
 package paquete10;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-public class APINetflix implements APIMovie{
-    
+public class APINetflix implements APIMovie {
+
     private String apiKey;
-    
+
     @Override
-    public void establecerApiKey(String ak){
-        apiKey = ak+123123;
+    public void establecerApiKey(String ak) {
+        apiKey = String.format("%s%s", ak, 123123);
     }
-    
+
     @Override
-    public String obtenerApiKey(){
+    public String obtenerApiKey() {
         return apiKey;
     }
     
+     @Override
+    public String toString() {
+        return "Netflix";
+    } 
+
 }
