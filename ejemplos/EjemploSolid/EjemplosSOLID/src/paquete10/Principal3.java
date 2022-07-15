@@ -5,16 +5,15 @@
  */
 package paquete10;
 
-import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.util.ArrayList;
 /**
  *
  * @author spart
  */
 public class Principal3 {
-    
+    public static void main(String[] args) {
+        String nombreArchivo = "peliculas.data";
+        ArchivoLectura lectura = new ArchivoLectura(nombreArchivo);
+        lectura.establecerGeneradorPelicula();
+        System.out.println(lectura);
+    } 
 }

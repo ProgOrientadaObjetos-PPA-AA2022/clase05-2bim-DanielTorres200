@@ -22,7 +22,7 @@ public class Tarjeta {
         nombreBanco = n;
     }
     
-    public void establecerCupoMaxim(double c){
+    public void establecerCupoMaximo(double c){
         cupoMaximo = c;
     }
     

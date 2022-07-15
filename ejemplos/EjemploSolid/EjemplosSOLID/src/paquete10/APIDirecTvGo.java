@@ -5,11 +5,12 @@
  */
 package paquete10;
 
+import java.io.Serializable;
 /**
  *
  * @author spart
  */
-public class APIDirecTvGo implements APIMovie {
+public class APIDirecTvGo implements APIMovie,Serializable {
      private String apiKey;
     
     @Override

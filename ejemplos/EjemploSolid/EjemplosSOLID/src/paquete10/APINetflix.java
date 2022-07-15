@@ -5,12 +5,9 @@
  */
 package paquete10;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class APINetflix implements APIMovie {
+public class APINetflix implements APIMovie,Serializable {
 
     private String apiKey;
 

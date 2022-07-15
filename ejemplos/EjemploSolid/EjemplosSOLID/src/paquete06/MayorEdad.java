@@ -22,7 +22,7 @@ public class MayorEdad extends Persona{
         tarjeta = n;
     }
     
-    public Tarjeta obtenerTarteja() {
+    public Tarjeta obtenerTarjeta() {
         return tarjeta;
     }
 }
